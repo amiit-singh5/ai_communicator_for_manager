@@ -1,0 +1,31 @@
+{
+  "logging": {
+    "log_dir": "ai_communicator_for_manager/logs",
+    "log_filename": "app.log",
+    "max_bytes": 2048,
+    "backup_count": 5,
+    "log_level": "INFO",
+    "log_format": "[%(asctime)s] [%(levelname)s] [%(pathname)s:%(funcName)s] - %(message)s",
+    "time_format": "%Y-%m-%d %H:%M:%S"
+  },
+  "other_config": {
+    "url": "https://openrouter.ai/api/v1/chat/completions",
+    "headers": {
+      "Authorization": "Bearer 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",
+      "Content-Type": "application/json"
+    },
+    "payload": {
+      "model": "mistralai/mistral-7b-instruct:free",
+      "messages": [
+        {
+          "role": "user",
+          "content": "A developer says he needs 8 more hours. Respond directly to the developer as their manager."
+        }
+      ],
+      "max_tokens": 200,
+      "temperature": 0.7
+    }
+  }
+}
+
+
